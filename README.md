@@ -1,33 +1,35 @@
+# TrueScan
 
- # TrueScan
+This project aims to classify news articles as **Fake** or **Real** using Machine Learning techniques. The project uses the Kaggle Fake News dataset, containing both fake and true news articles.
 
- **TrueScan** is a machine learning project to identify unreliable or misleading news articles. By leveraging Natural Language Processing (NLP) techniques, this project classifies news articles as either "Real" or "Fake" to combat the growing challenge of misinformation.
+## Dataset
+- **Source**: Kaggle Fake News Dataset.
+- The dataset consists of two CSV files: `Fake.csv` (containing fake news) and `True.csv` (containing true news).
 
- ## Technologies Used
+## Steps
+1. **Data Loading**: Load the `True.csv` and `Fake.csv` datasets.
+2. **Data Preprocessing**:
+   - Label data (0 = Fake, 1 = True).
+   - Merge and shuffle the data.
+   - Clean the text using tokenization and removing stopwords.
+3. **Feature Extraction**: Convert text data to numeric form using TF-IDF (Term Frequency-Inverse Document Frequency).
+4. **Model Building**:
+   - Train a Logistic Regression classifier to classify news as Fake or True.
+5. **Model Evaluation**:
+   - Use accuracy, confusion matrix, and classification report to evaluate the model.
+6. **Prediction**: Classify new news articles using the trained model.
 
-- **Python**: Core programming language
-- **NLTK**: For text preprocessing
-- **spaCy**: For lemmatization and named entity recognition
-- **Scikit-learn**: For implementing machine learning models
-- **Pandas & NumPy**: For data manipulation and analysis
-- **Matplotlib & Seaborn**: For data visualization
+## Libraries Used
+- `pandas`
+- `sklearn`
+- `nltk`
+- `re`
 
-## Features
 
-- **Preprocessing**: Tokenization, stopword removal, stemming, and lemmatization
-- **Machine Learning Models**: Logistic Regression, Decision Trees, Naive Bayes, Neural Networks
-- **Performance Metrics**: Accuracy, Precision, Recall, F1-score, and Confusion Matrix
 
- ## Model Evaluation
+## Future Improvements
+- Experiment with different algorithms (e.g., Naive Bayes, SVM).
+- Improve preprocessing (e.g., lemmatization, stemming).
+- Implement cross-validation for model tuning.
 
-The model's performance is evaluated using:
-- **Accuracy**: Percentage of correctly classified news articles
-- **Precision**: Percentage of true positives among all positive predictions
-- **Recall**: Proportion of actual positives correctly identified
-- **F1 Score**: Harmonic mean of precision and recall
-
- ## Acknowledgments
-
-- **Dataset**: Kaggle Fake News Dataset
-- **Libraries**: NLTK, spaCy, Scikit-learn, Pandas, NumPy
-
+---
