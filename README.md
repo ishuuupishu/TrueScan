@@ -25,11 +25,3 @@ This project aims to classify news articles as **Fake** or **Real** using Machin
 - `nltk`
 - `re`
 
-
-
-## Future Improvements
-- Experiment with different algorithms (e.g., Naive Bayes, SVM).
-- Improve preprocessing (e.g., lemmatization, stemming).
-- Implement cross-validation for model tuning.
-
----
